@@ -1,6 +1,6 @@
 package Streaming_Platform;
 
-public class DirectorFilter {
+public class DirectorFilter extends Filter{
 	private String director;
 
 	public DirectorFilter(String director) {

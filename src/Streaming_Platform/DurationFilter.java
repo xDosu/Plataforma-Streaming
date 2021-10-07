@@ -1,6 +1,6 @@
 package Streaming_Platform;
 
-public class DurationFilter {
+public class DurationFilter extends Filter{
 	private int maxDuration;
 	public DurationFilter(int maxDuration) {
 		super();

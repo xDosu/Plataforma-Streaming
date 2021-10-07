@@ -1,6 +1,6 @@
 package Streaming_Platform;
 
-public class ActressFilter {
+public class ActressFilter extends Filter{
 	private String actress;
 
 	public ActressFilter(String actress) {

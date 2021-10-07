@@ -1,6 +1,6 @@
 package Streaming_Platform;
 
-public class YearFilter {
+public class YearFilter extends Filter{
 	private int maxYear;
 
 	public YearFilter(int maxYear) {
