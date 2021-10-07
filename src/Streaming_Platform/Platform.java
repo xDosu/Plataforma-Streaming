@@ -56,6 +56,7 @@ public class Platform {
 		Film p2 = new Film("Yo Robot","...","Alex Proyas",2004,115,15);
 		Film p3 = new Film("Robots","...","Chris Wedge",2005,91,5);
 		Film p4 = new Film("Venom","...","Andy Serkis",2002,119,18);
+		Film p5 = new Film("Ethernals","...","dsafdf Serkis",2012,137,21);
 		
 		p1.addActor("Ricardo Darin");
 		p1.addActor("Guillermo Francella");
@@ -74,12 +75,13 @@ public class Platform {
 		netflix.addFilm(p2);
 		netflix.addFilm(p3);
 		netflix.addFilm(p4);
+		netflix.addFilm(p5);
 		
 		//Prueba getmovies()
 		System.out.println(netflix.getMovies());
 		System.out.println("---------------------");
 		
-		/*Películas cuya duración sea menor a 120 minutos, que no sean del género “comedia”.*/
+		/*Pelï¿½culas cuya duraciï¿½n sea menor a 120 minutos, que no sean del gï¿½nero ï¿½comediaï¿½.*/
 		NotFilter f1 = new NotFilter(new GenereFilter("comedia"));
 		AndFilter f2 = new AndFilter(f1, new DurationFilter(120));
 		HashSet<Film> filmFilter = netflix.find(f2);
@@ -87,7 +89,7 @@ public class Platform {
 		for(Film film : filmFilter) {
 			System.out.println(film.toString());
 		}
-		//Películas posteriores del 2017, a no ser que se trate de películas del género “infantil” o “documental”.
+		//Pelï¿½culas posteriores del 2017, a no ser que se trate de pelï¿½culas del gï¿½nero ï¿½infantilï¿½ o ï¿½documentalï¿½.
 		HashSet<Filter> filtrosRentable = new HashSet<Filter>();
 		filtrosRentable.add(f1);
 		filtrosRentable.add(new NotFilter(new YearFilter(2005)));
@@ -95,6 +97,7 @@ public class Platform {
 		System.out.println(netflix.esRentable(filtrosRentable,p2));
 		System.out.println(netflix.esRentable(filtrosRentable,p3));
 		System.out.println(netflix.esRentable(filtrosRentable,p4));
+		System.out.println(netflix.esRentable(filtrosRentable,p5));
 	}
 
 }
