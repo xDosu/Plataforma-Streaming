@@ -67,4 +67,5 @@ public class Film {
 		if(f.find(this)) result.add(this);
 		return result;
 	}
+	// Implementar metodo equals
 }
